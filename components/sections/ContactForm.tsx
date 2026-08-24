@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export default function ContactForm() {
@@ -6,8 +7,16 @@ export default function ContactForm() {
       <div className="grid lg:grid-cols-2 items-center gap-14">
         <div className="relative w-full max-w-md mx-auto lg:mx-0">
           <div className="absolute -bottom-4 -right-4 w-[85%] h-[70%] bg-yellow rounded-2xl -z-10 hidden sm:block" />
-          <div className="aspect-[3/4] bg-gray-light rounded-2xl flex items-center justify-center">
-            <span className="text-dark/30 font-heading uppercase tracking-widest">[ Mechanic Image ]</span>
+          <div className="aspect-[3/4] bg-gray-light rounded-2xl flex items-center justify-center overflow-hidden">
+            {/* Added mechanic image */}
+            <Image
+              src="/images/worker.webp"
+              alt="Mechanic"
+              width={320}
+              height={427}
+              className="object-cover w-full h-full rounded-2xl"
+              priority
+            />
           </div>
         </div>
 

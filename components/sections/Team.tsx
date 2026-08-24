@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const socials = [
   {
     label: "Facebook",
@@ -18,9 +20,9 @@ const socials = [
 ];
 
 const team = [
-  { name: "Rose A. Thomas", role: "Engine mechanic", bg: "bg-gray-light" },
-  { name: "Brandy Adams", role: "CEO of Ford", bg: "bg-gray-light" },
-  { name: "Davide Miller", role: "Founder", bg: "bg-yellow" },
+  { name: "Rose A. Thomas", role: "Engine mechanic", bg: "bg-gray-light", image: "/images/1.webp" },
+  { name: "Brandy Adams", role: "CEO of Ford", bg: "bg-gray-light", image: "/images/2.webp" },
+  { name: "Davide Miller", role: "Founder", bg: "bg-yellow", image: "/images/3.webp" },
 ];
 
 export default function Team() {
@@ -35,12 +37,17 @@ export default function Team() {
       </h2>
 
       <div className="mt-16 grid sm:grid-cols-3 gap-10">
-        {team.map((member) => (
+        {team.map((member, i) => (
           <div key={member.name} className="text-left">
-            <div className={`${member.bg} aspect-[4/5] flex items-center justify-center skew-card`}>
-              <span className="text-dark/30 font-heading uppercase tracking-widest text-sm">
-                [ Photo ]
-              </span>
+            <div className={`${member.bg} aspect-[4/5] flex items-center justify-center skew-card overflow-hidden`}>
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={240}
+                height={300}
+                className="object-cover w-full h-full"
+                draggable={false}
+              />
             </div>
             <h3 className="font-heading uppercase text-xl font-bold mt-6">{member.name}</h3>
             <p className="text-gray-500 text-sm mt-1">{member.role}</p>

@@ -1,12 +1,13 @@
+import Image from "next/image";
 import { Cog, Disc, Droplet, Settings2, Fan, Gauge, ArrowRight } from "lucide-react";
 
 const services = [
-  { icon: Cog, title: "Check Engine Light" },
-  { icon: Disc, title: "Break Repair Service" },
-  { icon: Droplet, title: "Oil Filtering Service" },
-  { icon: Settings2, title: "Emission Repair" },
-  { icon: Fan, title: "Motor Mount Repair" },
-  { icon: Gauge, title: "Full Car Inspection" },
+  { icon: Cog, title: "Check Engine Light", image: "/images/service1.webp" },
+  { icon: Disc, title: "Break Repair Service", image: "/images/service2.webp" },
+  { icon: Droplet, title: "Oil Filtering Service", image: "/images/service3.webp" },
+  { icon: Settings2, title: "Emission Repair", image: "/images/service4.webp" },
+  { icon: Fan, title: "Motor Mount Repair", image: "/images/service1.webp" },
+  { icon: Gauge, title: "Full Car Inspection", image: "/images/service2.webp" },
 ];
 
 const cardClip = {
@@ -26,9 +27,13 @@ export default function ServiceList() {
         {services.map((s) => (
           <div key={s.title} className="flex items-stretch overflow-hidden" style={cardClip}>
             <div className="w-2/5 bg-gray-light aspect-[4/5] flex items-center justify-center shrink-0">
-              <span className="text-dark/30 font-heading uppercase tracking-widest text-xs text-center px-2">
-                [ Image ]
-              </span>
+              <Image
+                src={s.image}
+                alt={s.title}
+                width={160}
+                height={200}
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="bg-gray-light flex-1 flex flex-col justify-center px-6 sm:px-8 py-8 -ml-6 relative z-10">
               <div className="bg-orange w-16 h-16 flex items-center justify-center mb-6" style={btnClip}>

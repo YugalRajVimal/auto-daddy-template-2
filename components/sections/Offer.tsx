@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Offer() {
@@ -25,8 +26,15 @@ export default function Offer() {
             <span className="font-bold text-2xl leading-none">25K</span>
             <span className="text-[10px] uppercase tracking-wide mt-1">Satisfied<br />Clients</span>
           </div>
-          <div className="w-full aspect-[16/9] bg-gradient-to-br from-yellow via-orange to-orange-2 rounded-2xl flex items-center justify-center">
-            <span className="text-dark/40 font-heading text-xl uppercase tracking-widest">[ Car Image ]</span>
+          <div className="w-full aspect-[16/9] bg-gradient-to-br from-yellow via-orange to-orange-2 rounded-2xl flex items-center justify-center overflow-hidden">
+            <Image
+              src="/images/car.webp"
+              alt="Car Offer"
+              width={560}
+              height={315}
+              className="object-cover w-full h-full"
+              priority
+            />
           </div>
         </div>
       </div>
