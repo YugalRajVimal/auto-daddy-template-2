@@ -1,40 +1,47 @@
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-
 export default function Offer() {
   return (
     <section className="bg-dark noise-bg px-5 lg:px-16 py-16 lg:py-20">
-      <div className="grid lg:grid-cols-2 items-center gap-10">
-        <div className="flex items-start gap-6 sm:gap-10">
-          <div className="text-left shrink-0">
-            <p className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none">30%</p>
-            <p className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none">OFF</p>
+      <div className="max-w-5xl mx-auto">
+        <span className="inline-flex items-center gap-2 font-heading uppercase text-sm tracking-widest text-yellow mb-3">
+          Overview
+        </span>
+        <h2 className="text-white font-heading uppercase font-bold text-3xl sm:text-4xl leading-tight mb-5">
+          Automotive Service Data
+        </h2>
+        <p className="text-gray-400 max-w-2xl mb-10 leading-relaxed">
+          Choosing a full-service option offers several advantages for vehicle owners: Every visit at Auto 27 is recorded in our system. We share this data with our regular clients that helps to revive the clear lense of service record with no costs.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+          {/* Customer Satisfaction */}
+          <div className="bg-dark-2 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center">
+            <span className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none mb-2 flex items-baseline">
+              99
+              <span className="text-xl font-bold ml-1 align-top">%</span>
+            </span>
+            <span className="text-white font-heading uppercase text-sm tracking-wide opacity-80">Customer Satisfaction</span>
           </div>
-          <div className="w-px bg-white/20 self-stretch hidden sm:block" />
-          <div>
-            <h2 className="text-white font-heading uppercase font-bold text-3xl sm:text-4xl leading-tight">
-              Exclusive Offers <br /> For This Week
-            </h2>
-            <button className="mt-8 bg-orange hover:bg-orange-2 transition-colors text-white font-heading uppercase tracking-wide px-8 py-4 flex items-center gap-2 skew-btn">
-              Get Discount <ArrowUpRight size={20} />
-            </button>
+          {/* Projects Completed */}
+          <div className="bg-dark-2 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center">
+            <span className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none mb-2 flex items-baseline">
+              20
+              <span className="text-xl font-bold ml-1 align-top">k</span>
+            </span>
+            <span className="text-white font-heading uppercase text-sm tracking-wide opacity-80">Projects Completed</span>
           </div>
-        </div>
-
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute -top-4 left-0 lg:left-10 z-10 bg-orange text-white rounded-full w-28 h-28 flex flex-col items-center justify-center text-center font-heading">
-            <span className="font-bold text-2xl leading-none">25K</span>
-            <span className="text-[10px] uppercase tracking-wide mt-1">Satisfied<br />Clients</span>
+          {/* Partner Companies */}
+          <div className="bg-dark-2 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center">
+            <span className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none mb-2 flex items-baseline">
+              150
+              <span className="text-xl font-bold ml-1 align-top">+</span>
+            </span>
+            <span className="text-white font-heading uppercase text-sm tracking-wide opacity-80">Partner Companies</span>
           </div>
-          <div className="w-full aspect-[16/9] bg-gradient-to-br from-yellow via-orange to-orange-2 rounded-2xl flex items-center justify-center overflow-hidden">
-            <Image
-              src="/images/car.webp"
-              alt="Car Offer"
-              width={560}
-              height={315}
-              className="object-cover w-full h-full"
-              priority
-            />
+          {/* Best Awards Winning */}
+          <div className="bg-dark-2 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center">
+            <span className="text-yellow font-heading font-bold text-5xl sm:text-6xl leading-none mb-2 flex items-baseline">
+              87
+            </span>
+            <span className="text-white font-heading uppercase text-sm tracking-wide opacity-80">Best Awards Winning</span>
           </div>
         </div>
       </div>

@@ -6,16 +6,39 @@ import { Quote, ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Brandy Adams",
-    role: "CEO of Ford",
-    text: "Deep abundantly herb inner best land beside dominion void divide seas bed pen living moved man moved mise was forth herb o make an yielding bad behold created whose morning wons the dominion heaven nibhada arcu maecenas",
-    image: "/images/user.webp",
+    name: "John Doe",
+    role: "Sony CEO",
+    image: "https://auto27.ca/wp-content/uploads/2024/10/testimonial-1.jpg",
+    rating: 4.5,
+    text: "Solved the never ending problem of chamber leaking oil in no time. Highly recommended. Ripudaman is very honest and skilled. He explained every thing before start of job.",
   },
   {
-    name: "James Miller",
-    role: "COO of Volvo",
-    text: "Great and thorough service every single time. The team explains every repair clearly and always delivers on schedule with quality workmanship that keeps our fleet running smoothly.",
-    image: "/images/user.webp",
+    name: "Tom Jones",
+    role: "Tesla CMO",
+    image: "https://auto27.ca/wp-content/uploads/2024/10/testimonial-4.jpg",
+    rating: 5,
+    text: "This guy is very skilled and expertise in car repairing profession. My car repairing is up and running the same day. Cost friendly bill payment.",
+  },
+  {
+    name: "Mark Wilson",
+    role: "Apple Manager",
+    image: "https://auto27.ca/wp-content/uploads/2024/10/testimonial-2.jpg",
+    rating: 4,
+    text: "At auto 27, their comprehensive inspection helps identify every car issues before they escalate into expensive repairs. It making maintenance easier to fit into a busy schedule.",
+  },
+  {
+    name: "Bob Smith",
+    role: "Doctor",
+    image: "https://auto27.ca/wp-content/uploads/2024/10/testimonial-3.jpg",
+    rating: 3.5,
+    text: "Had a leaky oil from my car transmission continuously, Auto 27 technician skill was outstanding to fix it. They left no mess behind. If you need a trustworthy repair servive for your car in Toronto, look no further.",
+  },
+  {
+    name: "Natasha Miles",
+    role: "Doctor",
+    image: "https://auto27.ca/wp-content/uploads/2024/10/testimonial-5.jpg",
+    rating: 3.5,
+    text: "Outstanding repair of car services.I am fully satisfied with their work and work culture. The use of A.I. in storage of data and find the way of apple of discord has appreciable. Strongly recommended.",
   },
 ];
 
@@ -28,8 +51,8 @@ export default function Testimonial() {
 
   return (
     <section className="bg-gray-light px-5 lg:px-16 py-20 lg:py-28">
-      <div className="grid lg:grid-cols-2 items-center gap-14">
-        <div className="relative w-full max-w-md mx-auto lg:mx-0">
+      <div className="grid lg:grid-cols-1 items-center gap-14 lg:mx-60">
+        {/* <div className="relative w-full max-w-md mx-auto lg:mx-0">
           <div className="absolute -top-4 -left-4 w-full h-full bg-orange rounded-2xl" />
           <div className="relative aspect-[4/5] bg-dark-2 rounded-2xl flex items-center justify-center overflow-hidden">
             <Image
@@ -46,9 +69,9 @@ export default function Testimonial() {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        <div className="">
           <div className="flex items-center gap-4 mb-6">
             <span className="border border-orange rounded-full w-14 h-14 flex items-center justify-center text-orange">
               <Quote size={22} />

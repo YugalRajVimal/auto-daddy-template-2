@@ -13,6 +13,10 @@ export default function ContactPage() {
       <ContactForm />
       <MapSection />
       <ContactInfoCards />
+      <p className="my-8 text-dark text-center text-2xl font-heading font-bold">
+      We send automated Service reminders to customers to keep informed<br />
+      about next due service.
+    </p>
       <Footer />
     </div>
   );

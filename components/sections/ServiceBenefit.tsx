@@ -5,27 +5,35 @@ import { Plus, Minus } from "lucide-react";
 
 const accordion = [
   {
-    title: "Eco-Friendly Practices",
-    desc: "We use environmentally responsible products and processes across every repair we perform.",
+    title: "Comprehensive Vehicle Diagnostics",
+    desc: "The comprehensive inspection helps identify minor issues before they escalate into expensive repairs.",
   },
   {
-    title: "Quality Workmanship",
-    desc: "Emphasize your commitment to providing best top-quality workmanship ensuring that all repairs are done to the highest standards to guarantee customer satisfaction and safety.",
+    title: "Routine Maintenance and Oil Changes",
+    desc: "Regular maintenance with clean oil and a new filter reduces friction, prevents sludge buildup, and extends the life of the engine.",
   },
   {
-    title: "Satisfaction Guarantee",
-    desc: "Every repair is backed by our guarantee, so you can drive away with total peace of mind.",
+    title: "Belts and Hoses",
+    desc: "All belts and hoses are inspected for any signs of wear or damage.",
+  },
+  {
+    title: "Fluid Checks and Top-Offs",
+    desc: "Checked for leaks and general condition of necessary fluids; chassis components may be lubricated if applicable to the vehicle type.",
+  },
+  {
+    title: "Battery",
+    desc: "Its condition and charging system are often tested.",
   },
 ];
 
 export default function ServiceBenefit() {
-  const [openIndex, setOpenIndex] = useState(1);
+  const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <section className="grid lg:grid-cols-2 items-center">
       <div className="aspect-[4/3] lg:aspect-auto lg:h-[600px] bg-gray-light flex items-center justify-center overflow-hidden">
         <img
-          src="/images/worker.webp"
+          src="/images/gallery5.webp"
           alt="Mechanic at work"
           className="object-cover w-full h-full"
           style={{ maxHeight: "600px", borderRadius: "1rem" }}
@@ -35,15 +43,14 @@ export default function ServiceBenefit() {
 
       <div className="px-5 lg:px-16 py-16 lg:py-0">
         <span className="inline-flex items-center gap-2 font-heading uppercase text-sm tracking-widest text-dark">
-          <span className="bg-yellow rounded-full w-5 h-5 inline-flex items-center justify-center text-[10px]">S</span>
-          ervice Benefit
+          <span className="bg-yellow rounded-full w-5 h-5 inline-flex items-center justify-center text-[10px]">W</span>
+          hat we do
         </span>
         <h2 className="mt-4 font-heading uppercase font-bold text-4xl sm:text-5xl leading-tight">
-          Service Dedication <br /> Miles Of Trust
+          Complete Auto Skills <br /> ...You can trust
         </h2>
         <p className="text-gray-600 mt-6 leading-relaxed max-w-lg">
-          Because they note vehicles emotions diseu suspendisse netus venenats sem rilus neque
-          aliquet morbie green great over called
+          Speedy solutions that exceed expectations
         </p>
 
         <div className="mt-8 divide-y divide-black/10 border-t border-black/10">

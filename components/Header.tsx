@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Search, Menu, X, Wrench } from "lucide-react";
+import { Phone, Mail, MapPin, Search, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -30,7 +31,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-2">
-            <Mail size={14} className="text-orange" /> info@fixton.com
+            <Mail size={14} className="text-orange" /> info@auto27.com
           </span>
           <span className="w-px h-4 bg-white/20" />
           <span className="flex items-center gap-2">
@@ -40,11 +41,18 @@ export default function Header() {
       </div>
 
       <div className="flex items-center justify-between px-5 lg:px-10 py-4">
-        <Link href="/" className="flex items-center gap-2 bg-dark-2 skew-card px-4 py-2">
-          <span className="bg-orange rounded-full p-2 flex items-center justify-center">
-            <Wrench size={18} className="text-white" />
+        <Link href="/" className="flex items-center gap-2 skew-card px-4 py-2">
+          <span className="bg-white  p-2 flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="AUTO 27 Logo"
+              width={80}
+              height={80}
+              className="object-contain"
+              priority
+            />
           </span>
-          <span className="text-white font-heading text-xl tracking-wide">FIXTON</span>
+          {/* <span className="text-white font-heading text-xl tracking-wide">AUTO 27</span> */}
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

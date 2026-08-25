@@ -20,24 +20,41 @@ const socials = [
 ];
 
 const team = [
-  { name: "Rose A. Thomas", role: "Engine mechanic", bg: "bg-gray-light", image: "/images/1.webp" },
-  { name: "Brandy Adams", role: "CEO of Ford", bg: "bg-gray-light", image: "/images/2.webp" },
-  { name: "Davide Miller", role: "Founder", bg: "bg-yellow", image: "/images/3.webp" },
+  {
+    name: "Ned Mccann",
+    role: "Service Advisor",
+    bg: "bg-gray-light",
+    image: "/images/1.webp",
+  },
+  {
+    name: "Olivia Torres",
+    role: "Brake Specialist",
+    bg: "bg-gray-light",
+    image: "/images/2.webp",
+  },
+  {
+    name: "Arnold Ayers",
+    role: "Tire Technician",
+    bg: "bg-yellow",
+    image: "/images/3.webp",
+  },
 ];
 
 export default function Team() {
   return (
     <section className="px-5 lg:px-16 py-20 lg:py-28 text-center">
       <span className="inline-flex items-center gap-2 font-heading uppercase text-sm tracking-widest text-dark">
-        <span className="bg-yellow rounded-full w-5 h-5 inline-flex items-center justify-center text-[10px]">E</span>
-        xpert Team
+        <span className="bg-yellow rounded-full w-5 h-5 inline-flex items-center justify-center text-[10px]">T</span>
+        eam - Auto 27
       </span>
       <h2 className="mt-4 font-heading uppercase font-bold text-4xl sm:text-5xl leading-tight">
-        Expert Mechanics <br /> Right Here
+        We’re the people who take care of your Car.
       </h2>
-
+      <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+        Auto 27 technicians are well trained, skilled and experienced to exceed your expectations and needs to the tune of 100% guaranteed.
+      </p>
       <div className="mt-16 grid sm:grid-cols-3 gap-10">
-        {team.map((member, i) => (
+        {team.map((member) => (
           <div key={member.name} className="text-left">
             <div className={`${member.bg} aspect-[4/5] flex items-center justify-center skew-card overflow-hidden`}>
               <Image

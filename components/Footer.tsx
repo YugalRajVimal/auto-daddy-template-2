@@ -28,6 +28,15 @@ const quickLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const galleryImages = [
+  "/images/gallery1.webp",
+  "/images/gallery2.webp",
+  "/images/gallery3.webp",
+  "/images/gallery4.webp",
+  "/images/gallery5.webp",
+  "/images/gallery6.webp",
+];
+
 export default function Footer() {
   return (
     <footer className="bg-dark noise-bg px-5 lg:px-16 pt-10 pb-6 relative">
@@ -67,24 +76,30 @@ export default function Footer() {
           <h4 className="text-white font-heading uppercase font-bold mb-6">Contact Info</h4>
           <div className="flex flex-col gap-6 text-sm">
             <div className="flex items-start gap-3">
-              <Mail size={16} className="text-yellow mt-1" />
+              <span className="text-yellow mt-1">
+                {/* Team Head icon, using Mail for consistency */}
+                <Mail size={16} />
+              </span>
               <div>
-                <p className="text-white font-heading text-xs uppercase mb-1">Email Us</p>
-                <p className="text-gray-400">support@fixton.com</p>
+                <p className="text-white font-heading text-xs uppercase mb-1">Team Head</p>
+                <p className="text-gray-400">Ripudaman Singh</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Phone size={16} className="text-yellow mt-1" />
               <div>
                 <p className="text-white font-heading text-xs uppercase mb-1">Phone No</p>
-                <p className="text-gray-400">+012 3456 7890</p>
+                <p className="text-gray-400">249 777 1313</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin size={16} className="text-yellow mt-1" />
+              <span className="text-yellow mt-1">
+                <Wrench size={16} />
+              </span>
               <div>
-                <p className="text-white font-heading text-xs uppercase mb-1">Location</p>
-                <p className="text-gray-400">528 seltice way coeur alene ID 83814, California</p>
+                <p className="text-white font-heading text-xs uppercase mb-1">Open Hours</p>
+                <p className="text-gray-400">Mon – Sat : 8 am – 6 pm</p>
+                <p className="text-gray-400">Sunday : CLOSED</p>
               </div>
             </div>
           </div>
@@ -106,9 +121,15 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-heading uppercase font-bold mb-6">Our Gallery</h4>
           <div className="grid grid-cols-3 gap-2">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="aspect-square bg-dark-2 rounded-md flex items-center justify-center">
-                <span className="text-white/20 text-[9px] uppercase">Img</span>
+            {galleryImages.map((src, i) => (
+              <div key={i} className="aspect-square bg-dark-2 rounded-md flex items-center justify-center overflow-hidden">
+                <img
+                  src={src}
+                  alt={`Auto 27 Gallery ${i + 1}`}
+                  className="w-full h-full object-cover rounded-md"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             ))}
           </div>
@@ -117,13 +138,14 @@ export default function Footer() {
 
       <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="bg-orange rounded-full p-2 flex items-center justify-center">
-            <Wrench size={16} className="text-white" />
+          <span className="bg-white rounded-full p-2 flex items-center justify-center">
+            <img src="/logo.png" alt="Auto 27 Logo" className="w-6 h-6" />
           </span>
-          <span className="text-white font-heading text-lg tracking-wide">FIXTON</span>
+     
+          <span className="text-white font-heading text-lg tracking-wide">AUTO 27</span>
         </Link>
         <p className="text-gray-400 text-sm text-center">
-          Copyright © 2026 <span className="text-white font-medium">Fixton</span>. All Rights Reserved
+          Copyright © 2026 <span className="text-white font-medium">Auto 27</span>. All Rights Reserved
         </p>
         <div className="flex items-center gap-3">
           {socials.map((s) => (
