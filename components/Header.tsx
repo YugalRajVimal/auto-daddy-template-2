@@ -26,7 +26,7 @@ export default function Header() {
           </span>
           <span className="w-px h-4 bg-white/20" />
           <span className="flex items-center gap-2">
-            <Phone size={14} className="text-orange" /> +880 1234 5678 90
+            <Phone size={14} className="text-orange" /> 249 777 1313
           </span>
         </div>
         <div className="flex items-center gap-6">
